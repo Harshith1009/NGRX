@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="login-form" [style.opacity]="login_Form_Opacity">
+        <form>
+            <h1>Login</h1>
+            <div class="content">
+                <div class="input-field">
+                    <input type="email" placeholder="Email" name="e" autocomplete="nope" [(ngModel)]="email">
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Password" name="p" autocomplete="new-password" [(ngModel)]="password">
+                </div>
+                <a class="link" (click)="signUp()" style="cursor: pointer;">Want to create a account ?</a>
+            </div>
+            <div class="action ">
+                <button (click)="GetLoginIn() ">Sign in</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="signup-Container" *ngIf="signUp_toggle">
+    <router-outlet></router-outlet>
+</div>

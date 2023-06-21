@@ -1,0 +1,12 @@
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

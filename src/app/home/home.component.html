@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-content class="box" style="font-weight: bolder; margin-right: 135px; ">
+        <div>ID</div>
+        <div>NAME</div>
+        <div>AGE</div>
+
+    </mat-card-content>
+</mat-card>
+
+
+<mat-card *ngFor="let item of mainData">
+    <mat-card-content class="box">
+        <div>{{item.id}}</div>
+        <div>{{item.name}}</div>
+        <div>{{item.age}}</div>
+        <button mat-button (click)="editNGRX(item)">Edit</button>
+        <button mat-button (click)="deleteNGRX(item)">Delete</button>
+    </mat-card-content>
+</mat-card>

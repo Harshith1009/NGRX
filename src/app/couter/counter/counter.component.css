@@ -1,0 +1,14 @@
+.container {
+    height: 77vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+}

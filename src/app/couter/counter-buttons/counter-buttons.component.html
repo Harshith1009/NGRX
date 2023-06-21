@@ -1,0 +1,13 @@
+<div class="contaier">
+
+    <button mat-button (click)="justIncrement()">Increment</button>
+    <button mat-button (click)="justDeccrement()">Decrement</button>
+    <button mat-button (click)="justReset()">Reset</button>
+
+    <div class="custome">
+        <form action="" [formGroup]="formBuilder">
+            <input style="margin-left: 40px;" type="number" placeholder="Enter a value to be added" [(ngModel)]="CustomeCounter" formControlName="isCheck">
+        </form>
+    </div>
+
+</div>

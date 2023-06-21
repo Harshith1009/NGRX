@@ -1,0 +1,109 @@
+<!-- <div class="container">
+      <div><a href="https://frontendmasters.com/courses/angular-13/lifecycle-hooks/" style="text-decoration: none;">Lights</a></div>
+      <div>Camera</div>
+      <div>Cinema</div>
+      <div>Sound</div>
+      <div>Action</div>
+  </div> -->
+
+<div class="form-container">
+
+    <form action="" #userform="ngForm">
+        <h2>Template Driven Forms</h2>
+
+        <!-- {{userform.value | json}} -->
+
+        <div class="name">
+            <label for="name">Name  </label>
+            <input id="name" type="text" name="Name" ngModel>
+        </div>
+        <div class="gender">
+            <label for="gen">Gender : </label>
+
+            <span for="m">male</span>
+            <input id="m" type="radio" value="male" name="gen" ngModel>
+
+            <span for="f">female</span>
+            <input id="f" type="radio" value="female" name="gen" ngModel>
+        </div>
+        <div class="num">
+            <label for="numb">Number </label>
+            <input id="numb" type="number" name="number" ngModel>
+        </div>
+        <div class="sub">
+            <label for="">Select the subject</label >
+        <select name="subjects" ngModel  >
+          <option value="" selected ></option>
+        <option [value]="item" *ngFor="let item of subjects">{{item}}</option>
+      </select>
+    </div>
+    <button mat-button (click)="onsubmit(userform.value)">Submit</button>
+
+</form>
+
+
+
+<form action="" method="post" [formGroup]="formBuilder" >
+<h2>Reactive Forms</h2>
+<div>
+Name: <input type="text" formControlName="name" >
+</div>
+<div>
+Password: <input type="password" formControlName="password">
+</div>
+<div>
+CheckBox: <input type="checkbox"  formControlName="checkboxs">
+</div>
+<button type="submit" mat-button (click)="onsec(formBuilder.value)" [disabled]="formBuilder.invalid" >submit</button>
+<h1>{{formBuilder.value| json}}</h1>
+</form>
+
+</div>
+
+<div class="CRUDcontainer">
+
+  <form action="" [formGroup]="CRUDform">
+    <h2>NGRX FORM</h2>
+        <div>
+            <label for="id">ID  </label>
+            <input id="id" type="number" formControlName="id">
+        </div>
+
+        <div>
+            <label for="name1">Name  </label>
+            <input id="name1" type="text" formControlName="name">
+            <!-- <div *ngIf="CRUDform.get('name').touched && !CRUDform.get('name').valid ">
+
+                <div *ngIf="CRUDform.get('name').errors.required">Name is required</div>
+                <div *ngIf="CRUDform.get('name').errors.minlength">Minimun length required</div>
+
+            </div> -->
+        </div>
+
+        <div>
+            <label for="age">Age  </label>
+            <input id="age" type="number" formControlName="age">
+        </div>
+        <button mat-button (click)="CRUDsubmit(CRUDform.value)" [disabled]="CRUDform.invalid">Submit</button>
+    </form>
+
+    <form class="editForm" action="" name="formEdit" [style]="tempCRUD==undefined ? {'display': displayNone} : {'font-style': displayBlock}">
+        <h2>NGRX edit FORM</h2>
+        <div>
+            <label for="id1">ID  </label>
+            <input id="id1" type="number" name="idx" [(ngModel)]="tempCRUD.id">
+        </div>
+
+        <div>
+            <label for="name2">Name  </label>
+            <input id="name2" type="text" name="namex" [(ngModel)]="tempCRUD.name">
+        </div>
+
+        <div>
+            <label for="age1">Age  </label>
+            <input id="age1" type="number" name="agex" [(ngModel)]="tempCRUD.age">
+        </div>
+        <button mat-button (click)="CRUDedit(tempCRUD)">Submit</button>
+    </form>
+
+</div>

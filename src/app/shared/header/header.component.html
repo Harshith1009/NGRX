@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" [routerLink]="['/home']">
+    <mat-icon>scatter_plot</mat-icon>
+  </button>
+    <span class="example-spacer"></span>
+
+    <button mat-button class="" aria-label="Example icon-button with heart icon" (click)="navCounter()">
+    <h3 style="margin-left: 20px;">Counter
+      <!-- <a href="#" [routerLink]="['/counter']" ></a> -->
+     </h3>
+  </button>
+
+    <button mat-button class="" aria-label="Example icon-button with share icon" (click)="navforms()">
+      <h3 style="margin-left: 30px;" >Forms
+        <!-- <a href="#"  [routerLink]="['/forms']"></a> -->
+        </h3>
+  </button>
+
+    <button mat-button class="" aria-label="Example icon-button with share icon" (click)="navLogin()">
+    <h3 style="margin-left: 30px;" >Login Data
+      <!-- <a href="#"  [routerLink]="['/forms']"></a> -->
+      </h3>
+</button>
+
+
+    <button mat-button class="" aria-label="Example icon-button with share icon" (click)="navLoginout()">
+    <h3 style="margin-left: 30px; color: rgb(250, 166, 166);" >LogOut
+      <!-- <a href="#"  [routerLink]="['/forms']"></a> -->
+      </h3>
+</button>
+
+
+
+</mat-toolbar>
